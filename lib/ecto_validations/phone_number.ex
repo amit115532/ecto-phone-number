@@ -1,8 +1,4 @@
-defmodule EctoPhoneNumber do
-  @moduledoc """
-  Phone number type with validation and formatting for Ecto.
-  """
-
+defmodule EctoValidations.PhoneNumber do
   @behaviour Ecto.Type
 
   def type, do: :string
@@ -18,7 +14,6 @@ defmodule EctoPhoneNumber do
     end
   end
 
-  def cast(nil), do: {:ok, nil}
   def cast(_), do: :error
 
   def load(_), do: :error
